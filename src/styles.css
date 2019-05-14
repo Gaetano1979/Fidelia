@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #187795
+}
+
+.container {
+    background-color: #c2dfe3;
+    /* padding-top: 60px; */
+    padding-bottom: 60px;
+    min-height: 500px;
+}
+
+footer {
+    width: 100%;
+    min-height: 50px;
+    color: #fff;
+}
