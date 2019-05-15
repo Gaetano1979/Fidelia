@@ -1,3 +1,43 @@
-<p>
-  carga works!
-</p>
+<div class="row">
+    <div class="col">
+        <h4>Selectiona Archivo</h4>
+        <form action="">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <button (click)=Cargar(p) class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+                </div>
+                <div appEnvioFile class="custom-file">
+                    <input [(ngModel)]="p" name="p" (onFocusEvent)="prueba($event)" type="file" #file class="custom-file-input">
+                    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+    <div class="col">
+        <h4>Lista Archivos</h4>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tamaño</th>
+                    <th scope="col">Progresso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;"></div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,30 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AngularFireModule } from '@angular/fire';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FotoComponent } from './components/foto/foto.component';
-import { CargaComponent } from './components/carga/carga.component';
-import { HomeComponent } from './components/home/home.component';
+
+// modulo de Rutas
 import { RutasPrimas } from './routes/routes.module';
-import { environment } from '../environments/environment';
+import { PaginasModule } from './paginas/paginas.module';
+import { FireModule } from './fire/fire.module';
+import { EnvioFileDirective } from './directives/envio-file.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    FotoComponent,
-    CargaComponent,
-    HomeComponent
+    EnvioFileDirective,
+    
   ],
   imports: [
     BrowserModule,
+    PaginasModule,
     RutasPrimas,
-    AngularFireModule.initializeApp(environment.firebase)
+    FireModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
